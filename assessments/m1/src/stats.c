@@ -239,7 +239,7 @@ int find_mean (unsigned char* ptr, const int len) {
 
 void print_statistics (unsigned char* ptr, const int len) {
     
-    char out_str[300] = "[stats.print_statistics]: median {";
+    char out_str[100] = "[stats.print_statistics]: median {";
     char tmp_str[10];
 
     int median  = find_median (ptr, len);
