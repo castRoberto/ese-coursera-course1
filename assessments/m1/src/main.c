@@ -10,20 +10,18 @@
  *****************************************************************************/
 
 /**
- * @file stats.c
- * @brief Implementation of statistical operations
+ * @file main.c
+ * @brief Entry point
  *
- * Implementation of statistical functions on a matrix.
+ * Entry point for the first assessmet
  *
  * @author Roberto Castro Beltran
  * @date 20 december 2023
  *
  */
 
-
-
-#include <stdio.h>
 #include "stats.h"
+
 
 /* Size of the Data Set */
 #define SIZE (40)
@@ -38,28 +36,10 @@ int main() {
 
   print_array (test, SIZE);
 
+  sort_array (test, SIZE);
+
+  print_array (test, SIZE);
+
   return 0;
-
-}
-
-void print_array (unsigned char* ptr, const int len) {
-
-    char out_str[200] = "\n[print_array]: [\n";
-    char tmp_str[10];
-    int columns = 8;
-
-    for (int i = 0; i < len; i++) {
-        strcat (out_str, "\t");
-        sprintf (tmp_str, "%d", ptr[i]);
-        strcat (out_str, tmp_str);
-
-        if (((i + 1) % columns) == 0) {
-            strcat (out_str, "\n");
-        }
-    }
-
-    strcat (out_str, "]\n\n");
-
-    printf (out_str);
 
 }

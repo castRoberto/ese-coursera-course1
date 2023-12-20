@@ -25,6 +25,7 @@
 #include <stdio.h>
 #include <string.h>
 
+
 /**
  * @brief Print the array to the screen
  *
@@ -34,6 +35,19 @@
  * @param len Data array length 
  */
 void print_array (unsigned char* ptr, const int len);
+
+
+/**
+ * @brief Sort from largest to smallest
+ *
+ * Given an array of data and a length, sort the array from largest to 
+ * smallest. (The zeroth element should be the largest value, and the 
+ * last (n-1) element should be the smallest value.).
+ *
+ * @param ptr Data array
+ * @param len Data array length
+ */
+void sort_array (unsigned char* ptr, const int len);
 
 
 #endif /* __STATS_H__ */
