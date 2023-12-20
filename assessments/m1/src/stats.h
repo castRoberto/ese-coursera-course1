@@ -76,4 +76,42 @@ unsigned char find_maximum (unsigned char* ptr, const int len);
 unsigned char find_minimum (unsigned char* ptr, const int len);
 
 
+/**
+ * @brief Calculate the median of a matrix
+ *
+ * Given a data array and a length, return the median.
+ *
+ * @param ptr Data array
+ * @param len Data array length
+ *
+ * @return median 
+ */
+int find_median (unsigned char* ptr, const int len);
+
+
+/**
+ * @brief Calculate the mean of a matrix
+ *
+ * Given a data array and a length, return the mean.
+ *
+ * @param ptr Data array
+ * @param len Data array length
+ *
+ * @return mean 
+ */
+int find_mean (unsigned char* ptr, const int len);
+
+
+/**
+ * @brief Print the array to the screen
+ *
+ * A function that prints the statistics of an array including minimum, 
+ * maximum, mean and median.
+ *
+ * @param ptr Data array
+ * @param len Data array length
+ */
+void print_statistics (unsigned char* ptr, const int len);
+
+
 #endif /* __STATS_H__ */

@@ -36,11 +36,17 @@ int main() {
 
   print_array (test, SIZE);
 
+  int median = find_median (test, SIZE);
+  int mean = find_mean (test, SIZE);
   unsigned char max = find_maximum (test, SIZE);
   unsigned char min = find_minimum (test, SIZE);
 
+  printf ("Median: %d\n", median);
+  printf ("Mean: %d\n", mean);
   printf ("Max: %d\n", max);
-  printf ("Min: %d\n", min);
+  printf ("Min: %d\n\n", min);
+
+  print_statistics (test, SIZE);
 
   sort_array (test, SIZE);
 

@@ -191,3 +191,79 @@ unsigned char find_minimum (unsigned char* ptr, const int len) {
     return (tmp_data[len - 1]);
 
 }
+
+
+int find_median (unsigned char* ptr, const int len) {
+
+    unsigned char tmp_data[len];
+
+    int median = 0;
+
+    copy_array (ptr, tmp_data, len);
+
+    sort_array (tmp_data, len);
+
+    if ((len % 2) == 0) {
+
+        median = (tmp_data[(len / 2) - 1] + tmp_data[(len / 2)]) / 2;
+
+    } else {
+        
+        median = tmp_data[(len + 1) / 2 - 1];
+
+    }
+
+    return median;
+
+}
+
+
+int find_mean (unsigned char* ptr, const int len) {
+
+    int i;
+    int average = 0;
+
+    if ((ptr == NULL) | (len <= 0)) { return 0; }
+
+    for (i = 0; i < len; i++) {
+
+        average += *ptr;
+        ptr++;
+
+    }
+
+    return (average / len);
+
+}
+
+
+void print_statistics (unsigned char* ptr, const int len) {
+    
+    char out_str[300] = "[stats.print_statistics]: median {";
+    char tmp_str[10];
+
+    int median  = find_median (ptr, len);
+    int mean    = find_mean (ptr, len);
+    unsigned char max = find_maximum (ptr, len);
+    unsigned char min = find_minimum (ptr, len);
+
+    sprintf (tmp_str, "%d", median);
+    strcat (out_str, tmp_str);
+
+    strcat (out_str, "}, mean {");
+    sprintf (tmp_str, "%d", mean);
+    strcat (out_str, tmp_str);
+
+    strcat (out_str, "}, max {");
+    sprintf (tmp_str, "%d", max);
+    strcat (out_str, tmp_str);
+
+    strcat (out_str, "}, min {");
+    sprintf (tmp_str, "%d", min);
+    strcat (out_str, tmp_str);
+
+    strcat (out_str, "}.");
+
+    printf (out_str);
+    
+}
