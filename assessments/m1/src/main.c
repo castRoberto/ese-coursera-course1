@@ -8,26 +8,25 @@
  * misuse of this material. 
  *
  *****************************************************************************/
+
 /**
- * @file <Add File Name> 
- * @brief <Add Brief Description Here >
+ * @file main.c
+ * @brief Entry point
  *
- * <Add Extended Description Here>
+ * Entry point for the first assessmet
  *
- * @author <Add FirsName LastName>
- * @date <Add date >
+ * @author Roberto Castro Beltran
+ * @date 20 december 2023
  *
  */
 
-
-
-#include <stdio.h>
 #include "stats.h"
+
 
 /* Size of the Data Set */
 #define SIZE (40)
 
-void main() {
+int main() {
 
   unsigned char test[SIZE] = { 34, 201, 190, 154,   8, 194,   2,   6,
                               114, 88,   45,  76, 123,  87,  25,  23,
@@ -35,9 +34,24 @@ void main() {
                               201,   6,  12,  60,   8,   2,   5,  67,
                                 7,  87, 250, 230,  99,   3, 100,  90};
 
-  /* Other Variable Declarations Go Here */
-  /* Statistics and Printing Functions Go Here */
+  print_array (test, SIZE);
+
+  int median = find_median (test, SIZE);
+  int mean = find_mean (test, SIZE);
+  unsigned char max = find_maximum (test, SIZE);
+  unsigned char min = find_minimum (test, SIZE);
+
+  printf ("Median: %d\n", median);
+  printf ("Mean: %d\n", mean);
+  printf ("Max: %d\n", max);
+  printf ("Min: %d\n\n", min);
+
+  print_statistics (test, SIZE);
+
+  sort_array (test, SIZE);
+
+  print_array (test, SIZE);
+
+  return 0;
 
 }
-
-/* Add other Implementation File Code Here */

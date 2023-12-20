@@ -1,1 +1,3 @@
-/* Add Author and Project Details here */
+Roberto Castro Beltran
+
+The first assignment of the course is developed
