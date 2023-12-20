@@ -24,6 +24,17 @@
 #include "stats.h"
 
 
+void copy_array (unsigned char* original, unsigned char* copy, int len) {
+
+    for (int i = 0; i < len; i++) {
+
+        copy[i] = original[i];
+        
+    }
+
+}
+
+
 void print_array (unsigned char* ptr, const int len) {
 
     char out_str[200] = "\n[print_array]: [\n";
@@ -152,5 +163,31 @@ void sort_array (unsigned char* ptr, const int len) {
     merge_sort (ptr, p, r);
 
     reverse_array (ptr, len);
+
+}
+
+
+unsigned char find_maximum (unsigned char* ptr, const int len) {
+
+    unsigned char tmp_data[len];
+
+    copy_array (ptr, tmp_data, len);
+
+    sort_array (tmp_data, len);
+
+    return (tmp_data[0]);
+
+}
+
+
+unsigned char find_minimum (unsigned char* ptr, const int len) {
+
+    unsigned char tmp_data[len];
+
+    copy_array (ptr, tmp_data, len);
+
+    sort_array (tmp_data, len);
+
+    return (tmp_data[len - 1]);
 
 }

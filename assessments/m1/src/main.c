@@ -36,6 +36,12 @@ int main() {
 
   print_array (test, SIZE);
 
+  unsigned char max = find_maximum (test, SIZE);
+  unsigned char min = find_minimum (test, SIZE);
+
+  printf ("Max: %d\n", max);
+  printf ("Min: %d\n", min);
+
   sort_array (test, SIZE);
 
   print_array (test, SIZE);

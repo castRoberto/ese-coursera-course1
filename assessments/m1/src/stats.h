@@ -50,4 +50,30 @@ void print_array (unsigned char* ptr, const int len);
 void sort_array (unsigned char* ptr, const int len);
 
 
+/**
+ * @brief Calculate the maximum of a matrix
+ *
+ * Given a data array and a length, return the maximum.
+ *
+ * @param ptr Data array
+ * @param len Data array length
+ *
+ * @return maximum 
+ */
+unsigned char find_maximum (unsigned char* ptr, const int len);
+
+
+/**
+ * @brief Calculate the minimum of a matrix
+ *
+ * Given a data array and a length, return the minimum.
+ *
+ * @param ptr Data array
+ * @param len Data array length
+ *
+ * @return minimum 
+ */
+unsigned char find_minimum (unsigned char* ptr, const int len);
+
+
 #endif /* __STATS_H__ */
