@@ -9,13 +9,14 @@
  *
  *****************************************************************************/
 /**
- * @file <Add File Name> 
- * @brief <Add Brief Description Here >
+ * @file stats.h
+ * @brief Headers for statistics
  *
- * <Add Extended Description Here>
+ * In this file the prototypes of all the functions that calculate 
+ * attributes of matrices are declared.
  *
- * @author <Add FirsName LastName>
- * @date <Add date >
+ * @author Roberto Castro Beltran
+ * @date 20 december 2023
  *
  */
 #ifndef __STATS_H__

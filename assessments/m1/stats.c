@@ -8,14 +8,15 @@
  * misuse of this material. 
  *
  *****************************************************************************/
+
 /**
- * @file <Add File Name> 
- * @brief <Add Brief Description Here >
+ * @file stats.c
+ * @brief Implementation of statistical operations
  *
- * <Add Extended Description Here>
+ * Implementation of statistical functions on a matrix.
  *
- * @author <Add FirsName LastName>
- * @date <Add date >
+ * @author Roberto Castro Beltran
+ * @date 20 december 2023
  *
  */
 
