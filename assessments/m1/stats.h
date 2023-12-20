@@ -22,20 +22,18 @@
 #ifndef __STATS_H__
 #define __STATS_H__
 
-/* Add Your Declarations and Function Comments here */ 
+#include <stdio.h>
+#include <string.h>
 
 /**
- * @brief <Add Brief Description of Function Here>
+ * @brief Print the array to the screen
  *
- * <Add Extended Description Here>
+ * Given an array of data and a length, print the array to the screen.
  *
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
- *
- * @return <Add Return Informaiton here>
+ * @param ptr Data array
+ * @param len Data array length 
  */
+void print_array (unsigned char* ptr, const int len);
 
 
 #endif /* __STATS_H__ */
