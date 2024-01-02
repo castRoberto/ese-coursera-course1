@@ -10,15 +10,17 @@
 #*****************************************************************************
 
 #------------------------------------------------------------------------------
-# <Put a Description Here>
+# Compilation system for the introduction to embedded systems course
 #
 # Use: make [TARGET] [PLATFORM-OVERRIDES]
 #
 # Build Targets:
-#      <Put a description of the supported targets here>
+#		- build: Compile all build units and the final executable
+#		- compile-all: Compile all build units without linking
 #
 # Platform Overrides:
-#      <Put a description of the supported Overrides here
+#		- Use PLATFORM=HOST to generate development platform-specific binaries
+#		- Use PLATFORM=MSP432 to generate embedded platform binaries
 #
 #------------------------------------------------------------------------------
 include sources.mk
