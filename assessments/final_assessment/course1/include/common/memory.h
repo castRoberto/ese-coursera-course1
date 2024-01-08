@@ -22,6 +22,9 @@
 #ifndef __MEMORY_H__
 #define __MEMORY_H__
 
+#include <stdlib.h>
+#include <stdint.h>
+
 /**
  * @brief Sets a value of a data array 
  *
@@ -89,5 +92,38 @@ void set_all(char * ptr, char value, unsigned int size);
  * @return void.
  */
 void clear_all(char * ptr, unsigned int size);
+
+/**
+ * @brief Reserve words in dynamic memory
+ *
+ * Given a number of words, reserve the appropriate space in dynamic 
+ * memory
+ * 
+ * Instructions:
+ * 
+ *  1. This should take number of words to allocate in dynamic memory
+ * 
+ *  2. All operations need to be performed using pointer arithmetic, 
+ *     not array indexing
+ * 
+ *  3. Should return a pointer to memory if successful, or a Null 
+ *     Pointer if not successful
+ *
+ * @param length Number of words to reserve
+ * 
+ * @return Pointer to memory
+ */
+int32_t * reserve_words(size_t length);
+
+/**
+ * @brief Free dynamic memory
+ *
+ * Given a pointer to dynamic memory, the occupied space is freed 
+ *
+ * @param src Pointer to data array
+ *
+ * @return void.
+ */
+void free_words(int32_t * src);
 
 #endif /* __MEMORY_H__ */

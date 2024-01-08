@@ -6,6 +6,7 @@
         "string.h": "c",
         "course1.h": "c",
         "cstdio": "cpp",
-        "cwchar": "cpp"
+        "cwchar": "cpp",
+        "stdint.h": "c"
     }
 }
