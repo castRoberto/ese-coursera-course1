@@ -20,7 +20,7 @@
  * @date April 1 2017
  *
  */
-#include "memory.h"
+#include "../include/common/memory.h"
 
 /***********************************************************
  Function Definitions
@@ -48,3 +48,48 @@ void clear_all(char * ptr, unsigned int size){
   set_all(ptr, 0, size);
 }
 
+int32_t* reserve_words(size_t length) {
+
+    int32_t* ptr = (int32_t*) malloc(length * sizeof(int32_t));
+
+    if (ptr == NULL) {
+
+        return NULL;
+
+    }
+
+    return ptr;
+}
+
+void free_words(int32_t* src) {
+
+    free ((uint32_t*) src);
+
+}
+
+uint8_t* my_memmove(uint8_t * src, uint8_t * dst, size_t length) {
+
+    uint8_t* d = dst;
+    const uint8_t* s = src;
+
+    // No copy needed if pointers are equal or length is zero
+    if (d == s || length == 0) {
+        return dst;
+    }
+
+    if (d < s || d >= s + length) {
+        // No overlap, can be copied from left to right
+        while (length-- > 0) {
+            *d++ = *s++;
+        }
+    } else {
+        // There is overlap, copy from right to left to avoid corruption
+        d += length - 1;
+        s += length - 1;
+        while (length-- > 0) {
+            *d-- = *s--;
+        }
+    }
+
+    return dst;
+}

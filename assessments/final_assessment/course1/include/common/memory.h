@@ -22,6 +22,9 @@
 #ifndef __MEMORY_H__
 #define __MEMORY_H__
 
+#include <stdlib.h>
+#include <stdint.h>
+
 /**
  * @brief Sets a value of a data array 
  *
@@ -89,5 +92,61 @@ void set_all(char * ptr, char value, unsigned int size);
  * @return void.
  */
 void clear_all(char * ptr, unsigned int size);
+
+/**
+ * @brief Move values from one memory location to another
+ *
+ * Given two pointers to byte data sets, move a number of bytes 
+ * from one location to the other
+ * 
+ * Instructions:
+ *  1. This function takes two byte pointers (one source and one destination)
+ *     and a length of bytes to move from the source location to the destination.
+ *  2. The behavior should handle overlap of source and destination. Copy should 
+ *     occur, with no data corruption.
+ *  3. All operations need to be performed using pointer arithmetic, not array 
+ *     indexing
+ *  4. Should return a pointer to the destination (dst).
+ *
+ * @param src Pointer to data array
+ * @param dst Number of elements to set to zero
+ * @param length Number of bytes to move
+ *
+ * @return Pointer to dst.
+ */
+uint8_t * my_memmove(uint8_t * src, uint8_t * dst, size_t length);
+
+/**
+ * @brief Reserve words in dynamic memory
+ *
+ * Given a number of words, reserve the appropriate space in dynamic 
+ * memory
+ * 
+ * Instructions:
+ * 
+ *  1. This should take number of words to allocate in dynamic memory
+ * 
+ *  2. All operations need to be performed using pointer arithmetic, 
+ *     not array indexing
+ * 
+ *  3. Should return a pointer to memory if successful, or a Null 
+ *     Pointer if not successful
+ *
+ * @param length Number of words to reserve
+ * 
+ * @return Pointer to memory
+ */
+int32_t * reserve_words(size_t length);
+
+/**
+ * @brief Free dynamic memory
+ *
+ * Given a pointer to dynamic memory, the occupied space is freed 
+ *
+ * @param src Pointer to data array
+ *
+ * @return void.
+ */
+void free_words(int32_t * src);
 
 #endif /* __MEMORY_H__ */
