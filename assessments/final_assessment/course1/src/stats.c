@@ -37,23 +37,27 @@ void copy_array (unsigned char* original, unsigned char* copy, int len) {
 
 void print_array (unsigned char* ptr, const int len) {
 
-    char out_str[200] = "\n[print_array]: [\n";
-    char tmp_str[10];
-    int columns = 8;
+    #ifdef VERBOSE
 
-    for (int i = 0; i < len; i++) {
-        strcat (out_str, "\t");
-        sprintf (tmp_str, "%d", ptr[i]);
-        strcat (out_str, tmp_str);
+        char out_str[200] = "\n[print_array]: [\n";
+        char tmp_str[10];
+        int columns = 8;
 
-        if (((i + 1) % columns) == 0) {
-            strcat (out_str, "\n");
+        for (int i = 0; i < len; i++) {
+            strcat (out_str, "\t");
+            sprintf (tmp_str, "%d", ptr[i]);
+            strcat (out_str, tmp_str);
+
+            if (((i + 1) % columns) == 0) {
+                strcat (out_str, "\n");
+            }
         }
-    }
 
-    strcat (out_str, "]\n\n");
+        strcat (out_str, "]\n\n");
 
-    printf (out_str);
+        PRINTF (out_str);
+
+    #endif
 
 }
 
@@ -238,32 +242,36 @@ int find_mean (unsigned char* ptr, const int len) {
 
 
 void print_statistics (unsigned char* ptr, const int len) {
+
+    #ifdef VERBOSE
     
-    char out_str[100] = "[stats.print_statistics]: median {";
-    char tmp_str[10];
+        char out_str[100] = "[stats.print_statistics]: median {";
+        char tmp_str[10];
 
-    int median  = find_median (ptr, len);
-    int mean    = find_mean (ptr, len);
-    unsigned char max = find_maximum (ptr, len);
-    unsigned char min = find_minimum (ptr, len);
+        int median  = find_median (ptr, len);
+        int mean    = find_mean (ptr, len);
+        unsigned char max = find_maximum (ptr, len);
+        unsigned char min = find_minimum (ptr, len);
 
-    sprintf (tmp_str, "%d", median);
-    strcat (out_str, tmp_str);
+        sprintf (tmp_str, "%d", median);
+        strcat (out_str, tmp_str);
 
-    strcat (out_str, "}, mean {");
-    sprintf (tmp_str, "%d", mean);
-    strcat (out_str, tmp_str);
+        strcat (out_str, "}, mean {");
+        sprintf (tmp_str, "%d", mean);
+        strcat (out_str, tmp_str);
 
-    strcat (out_str, "}, max {");
-    sprintf (tmp_str, "%d", max);
-    strcat (out_str, tmp_str);
+        strcat (out_str, "}, max {");
+        sprintf (tmp_str, "%d", max);
+        strcat (out_str, tmp_str);
 
-    strcat (out_str, "}, min {");
-    sprintf (tmp_str, "%d", min);
-    strcat (out_str, tmp_str);
+        strcat (out_str, "}, min {");
+        sprintf (tmp_str, "%d", min);
+        strcat (out_str, tmp_str);
 
-    strcat (out_str, "}.");
+        strcat (out_str, "}.");
 
-    printf (out_str);
+        PRINTF (out_str);
+
+    #endif
     
 }

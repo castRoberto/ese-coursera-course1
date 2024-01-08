@@ -3,6 +3,9 @@
         "memory.h": "c",
         "platform.h": "c",
         "msp432p401r.h": "c",
-        "string.h": "c"
+        "string.h": "c",
+        "course1.h": "c",
+        "cstdio": "cpp",
+        "cwchar": "cpp"
     }
 }
