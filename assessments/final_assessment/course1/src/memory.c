@@ -67,7 +67,7 @@ void free_words(int32_t* src) {
 
 }
 
-uint8_t* my_memmove(uint8_t * src, uint8_t * dst, size_t length) {
+uint8_t* my_memmove(uint8_t* src, uint8_t* dst, size_t length) {
 
     uint8_t* d = dst;
     const uint8_t* s = src;
@@ -89,6 +89,18 @@ uint8_t* my_memmove(uint8_t * src, uint8_t * dst, size_t length) {
         while (length-- > 0) {
             *d-- = *s--;
         }
+    }
+
+    return dst;
+}
+
+uint8_t* my_memcopy(uint8_t* src, uint8_t* dst, size_t length) {
+
+    char *d = dst;
+    const char *s = src;
+
+    while (length--) {
+        *d++ = *s++;
     }
 
     return dst;

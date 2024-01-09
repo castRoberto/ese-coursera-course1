@@ -114,7 +114,7 @@ void clear_all(char * ptr, unsigned int size);
  *
  * @return Pointer to dst.
  */
-uint8_t * my_memmove(uint8_t * src, uint8_t * dst, size_t length);
+uint8_t* my_memmove(uint8_t* src, uint8_t* dst, size_t length);
 
 /**
  * @brief Reserve words in dynamic memory
@@ -136,7 +136,7 @@ uint8_t * my_memmove(uint8_t * src, uint8_t * dst, size_t length);
  * 
  * @return Pointer to memory
  */
-int32_t * reserve_words(size_t length);
+int32_t* reserve_words(size_t length);
 
 /**
  * @brief Free dynamic memory
@@ -147,6 +147,29 @@ int32_t * reserve_words(size_t length);
  *
  * @return void.
  */
-void free_words(int32_t * src);
+void free_words(int32_t* src);
+
+/**
+ * @brief Move values from one memory location to another
+ *
+ * Given two pointers to byte data sets, move a number of bytes from one 
+ * location to the other without handling overlap
+ * 
+ * Instructions:
+ *  1. This function takes two byte pointers (one source and one destination) 
+ *     and a length of bytes to copy from the source location to the destination.
+ *  2. The behavior is undefined if there is overlap of source and destination. 
+ *     Copy should still occur, but will likely corrupt your data.
+ *  3. All operations need to be performed using pointer arithmetic, not array 
+ *     indexing
+ *  4. Should return a pointer to the destination (dst).
+ *
+ * @param src Pointer to data array
+ * @param dst Number of elements to set to zero
+ * @param length Number of bytes to move
+ *
+ * @return Pointer to dst.
+ */
+uint8_t* my_memcopy(uint8_t* src, uint8_t* dst, size_t length);
 
 #endif /* __MEMORY_H__ */
