@@ -209,10 +209,29 @@ uint8_t* my_memset(uint8_t* src, size_t length, uint8_t value);
  *
  * @param src Pointer to data array
  * @param length Number of bytes to move
- * @param value Value to set
  *
  * @return Pointer to src.
  */
 uint8_t* my_memzero(uint8_t* src, size_t length);
+
+/**
+ * @brief Reverse the order of the elements of an array
+ *
+ * Given an array of bytes and its length, reverse the order of 
+ * its elements
+ * 
+ * Instructions:
+ *  1. This should take a pointer to a memory location and a 
+ *     length in bytes and reverse the order of all of the bytes.
+ *  2. All operations need to be performed using pointer arithmetic, 
+ *     not array indexing
+ *  3. Should return a pointer to the source.
+ *
+ * @param src Pointer to data array
+ * @param length Number of bytes to move
+ *
+ * @return Pointer to src.
+ */
+uint8_t* my_reverse(uint8_t* src, size_t length);
 
 #endif /* __MEMORY_H__ */

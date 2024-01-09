@@ -123,3 +123,27 @@ uint8_t* my_memzero(uint8_t* src, size_t length) {
 
   return src;
 }
+
+uint8_t* my_reverse(uint8_t* src, size_t length) {
+
+  if (src == NULL || length <= 1) {
+      // Nothing is done if the array is null or has only one element
+      return;
+  }
+
+  uint8_t* start = src;
+  uint8_t* end = src + length - 1;
+
+  while (start < end) {
+      // Swap the elements pointed to by start and end
+      int temp = *start;
+      *start = *end;
+      *end = temp;
+
+      // Move pointers to the center of the array
+      ++start;
+      --end;
+  }
+
+  return src;
+}
