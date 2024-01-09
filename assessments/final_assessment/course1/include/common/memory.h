@@ -172,4 +172,47 @@ void free_words(int32_t* src);
  */
 uint8_t* my_memcopy(uint8_t* src, uint8_t* dst, size_t length);
 
+/**
+ * @brief Assign a value to an entire array
+ *
+ * Given a vector and a value, assign the given value to each 
+ * position
+ * 
+ * Instructions:
+ *  1. This should take a pointer to a source memory location, a length 
+ *     in bytes and set all locations of that memory to a given value.
+ *  2. All operations need to be performed using pointer arithmetic, 
+ *     not array indexing.
+ *  3. Should return a pointer to the source (src).
+ *  4. You should NOT reuse the set_all() function
+ *
+ * @param src Pointer to data array
+ * @param length Number of bytes to move
+ * @param value Value to set
+ *
+ * @return Pointer to src.
+ */
+uint8_t* my_memset(uint8_t* src, size_t length, uint8_t value);
+
+/**
+ * @brief Assign cero to an entire array
+ *
+ * Given a vector, assign cero to each position
+ * 
+ * Instructions:
+ *  1. This should take a pointer to a memory location, a length in 
+ *     bytes and zero out all of the memory.
+ *  2. All operations need to be performed using pointer arithmetic, 
+ *     not array indexing
+ *  3. Should return a pointer to the source (src).
+ *  4. You should NOT reuse the clear_all() function
+ *
+ * @param src Pointer to data array
+ * @param length Number of bytes to move
+ * @param value Value to set
+ *
+ * @return Pointer to src.
+ */
+uint8_t* my_memzero(uint8_t* src, size_t length);
+
 #endif /* __MEMORY_H__ */
