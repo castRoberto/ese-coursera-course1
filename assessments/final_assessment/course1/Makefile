@@ -71,8 +71,8 @@ else
 		system_msp432p401r.c \
 		interrupts_msp432p401r_gcc.c
 
-	INCLUDES += -I../include/msp432 \
-		-I../include/CMSIS
+	INCLUDES += -I./include/msp432 \
+		-I./include/CMSIS
 
 endif
 
