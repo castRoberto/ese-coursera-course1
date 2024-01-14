@@ -44,7 +44,7 @@ FPU = fpv4-sp-d16
 LINKER_FILE = msp432p401r.lds
 
 # Compiler Flags and Defines
-CFLAGS = -g -std=c99 $(INCLUDES) -Wall -O0 -MD -DCOURSE1#-Werror
+CFLAGS = -g -std=c99 $(INCLUDES) -Wall -O0 -MD -DCOURSE1 -lm#-Werror
 LDFLAGS =
 
 
