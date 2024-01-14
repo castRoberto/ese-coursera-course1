@@ -7,6 +7,7 @@
         "course1.h": "c",
         "cstdio": "cpp",
         "cwchar": "cpp",
-        "stdint.h": "c"
+        "stdint.h": "c",
+        "type_traits": "c"
     }
 }
